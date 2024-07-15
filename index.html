@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>धनवृद्धि दर्शन</title>
-    <link rel="icon" href="/img/logo.png" type="image/png">
+    <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,7 +25,7 @@
                 <div class="flex space-x-7">
                     <div>
                         <a href="#" class="flex items-center py-4 px-2">
-                            <img src="/img/logo.png" alt="धनवृद्धि दर्शन Logo" class="h-8 w-8 mr-2">
+                            <img src="img/logo.png" alt="धनवृद्धि दर्शन Logo" class="h-8 w-8 mr-2">
                             <span class="font-semibold text-gray-500 text-lg">धनवृद्धि दर्शन</span>
                         </a>
                     </div>
@@ -42,29 +42,62 @@
                     <a href="https://abhi.ai.copilot.live/"
                         class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-600 transition duration-300 celebration-button">AI
                         Chatbot</a>
-
-                    <style>
-                        @keyframes celebrate {
-                            0% {
-                                transform: scale(1);
-                            }
-
-                            50% {
-                                transform: scale(1.1);
-                            }
-
-                            100% {
-                                transform: scale(1);
-                            }
-                        }
-
-                        .celebration-button:hover {
-                            animation: celebrate 0.5s ease-in-out;
-                        }
-                    </style>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-green-500" x-show="!showMenu" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
+        <!-- Mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li><a href="#"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300">Home</a>
+                </li>
+                <li><a href="#"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300">Services</a>
+                </li>
+                <li><a href="#"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300">About</a>
+                </li>
+                <li><a href="#"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300">Contact</a>
+                </li>
+                <li><a href="https://abhi.ai.copilot.live/"
+                        class="block text-sm px-2 py-4 text-white bg-green-500 hover:bg-green-600 transition duration-300">AI
+                        Chatbot</a></li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+        @keyframes celebrate {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .celebration-button:hover {
+            animation: celebrate 0.5s ease-in-out;
+        }
+    </style>
+    </div>
+    </div>
+    </div>
     </nav>
     <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4" role="alert">
         <p class="font-bold">New!</p>
