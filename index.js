@@ -66,7 +66,7 @@ window.addEventListener('load', () => {
     loadingOverlay.style.transition = 'opacity 0.5s ease-out'
     setTimeout(() => {
         loadingOverlay.remove()
-    }, 500)
+    }, 1000)
 })
 
 // Add animation while scrolling
