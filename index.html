@@ -11,42 +11,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
     </style>
 </head>
 
 <body class="bg-gray-100">
-    <nav class="bg-white shadow-lg">
+    <!-- nav start -->
+    <nav class="bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between">
                 <div class="flex space-x-7">
                     <div>
                         <a href="#" class="flex items-center py-4 px-2">
                             <img src="img/logo.png" alt="धनवृद्धि दर्शन Logo" class="h-8 w-8 mr-2">
-                            <span class="font-semibold text-gray-500 text-lg">धनवृद्धि दर्शन</span>
+                            <span class="font-semibold text-white text-lg">धनवृद्धि दर्शन</span>
                         </a>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-3">
                     <a href="#"
-                        class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Home</a>
+                        class="py-2 px-2 font-semibold text-white rounded hover:bg-purple-700 hover:text-purple-500 transition duration-300">Home</a>
                     <a href="#"
-                        class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Services</a>
+                        class="py-2 px-2 font-semibold text-white rounded hover:bg-purple-700 hover:text-purple-500 transition duration-300">Services</a>
                     <a href="#"
-                        class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">About</a>
+                        class="py-2 px-2 font-semibold text-white rounded hover:bg-purple-700 hover:text-purple-500 transition duration-300">About</a>
                     <a href="#"
-                        class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Contact</a>
+                        class="py-2 px-2 font-semibold text-white rounded hover:bg-purple-700 hover:text-purple-500 transition duration-300">Contact</a>
                     <a href="https://abhi.ai.copilot.live/"
-                        class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-600 transition duration-300 celebration-button">AI
+                        class="py-2 px-2 font-medium text-blue-500 bg-white rounded hover:bg-gray-200 hover:text-purple-500 transition duration-300 celebration-button">AI
                         Chatbot</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button class="outline-none mobile-menu-button">
-                        <svg class="w-6 h-6 text-gray-500 hover:text-green-500" x-show="!showMenu" fill="none"
+                        <svg class="w-6 h-6 text-white hover:text-gray-200" x-show="!showMenu" fill="none"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path d="M4 6h16M4 12h16M4 18h16"></path>
@@ -59,156 +56,284 @@
         <div class="hidden mobile-menu">
             <ul class="">
                 <li><a href="#"
-                        class="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300">Home</a>
+                        class="block text-sm px-2 py-4 text-white hover:bg-purple-700 hover:text-blue-500 transition duration-300">Home</a>
                 </li>
                 <li><a href="#"
-                        class="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300">Services</a>
+                        class="block text-sm px-2 py-4 text-white hover:bg-purple-700 hover:text-blue-500 transition duration-300">Services</a>
                 </li>
                 <li><a href="#"
-                        class="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300">About</a>
+                        class="block text-sm px-2 py-4 text-white hover:bg-purple-700 hover:text-blue-500 transition duration-300">About</a>
                 </li>
                 <li><a href="#"
-                        class="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300">Contact</a>
+                        class="block text-sm px-2 py-4 text-white hover:bg-purple-700 hover:text-blue-500 transition duration-300">Contact</a>
                 </li>
                 <li><a href="https://abhi.ai.copilot.live/"
-                        class="block text-sm px-2 py-4 text-white bg-green-500 hover:bg-green-600 transition duration-300">AI
+                        class="block text-sm px-2 py-4 text-blue-500 bg-purple-700 hover:bg-gray-200 transition duration-300">AI
                         Chatbot</a></li>
             </ul>
         </div>
     </nav>
-    <style>
-        @keyframes celebrate {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .celebration-button:hover {
-            animation: celebrate 0.5s ease-in-out;
-        }
-    </style>
     </div>
     </div>
     </div>
     </nav>
+    <!-- nav end -->
+    <!-- Hero section -->
     <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4" role="alert">
         <p class="font-bold">New!</p>
         <p>Try our AI Chatbot for instant financial advice!</p>
     </div>
-    <div class="container mx-auto px-4 py-8">
-        <header class="bg-green-500 text-white text-center py-16 rounded-lg shadow-md">
-            <h1 class="text-4xl font-bold mb-4">Welcome to धनवृद्धि दर्शन</h1>
-            <p class="text-xl">Your Path to Financial Wisdom and Prosperity</p>
+    <!-- Hero section -->
+    <div class="container mx-auto px-4 py-8" id="hero">
+        <header
+            class="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-16 rounded-lg shadow-md mb-8">
+            <h1 class="text-5xl font-bold mb-4">Welcome to धनवृद्धि दर्शन</h1>
+            <p class="text-2xl">Your Path to Financial Wisdom and Prosperity</p>
         </header>
-
-        <section class="mt-12">
-            <h2 class="text-3xl font-semibold text-center mb-8">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Financial Planning</h3>
-                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                        alt="Financial Planning" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <p class="text-gray-600">Comprehensive financial planning tailored to your goals and needs.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Investment Advice</h3>
+        <div class="mt-8">
+            <div class="relative overflow-hidden rounded-lg shadow-lg">
+                <div class="flex transition-transform duration-500 ease-in-out" id="slider">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 1" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 2" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1604594849809-dfedbc827105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 3" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 4" class="w-full h-64 object-cover">
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                        alt="Investment Advice" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <p class="text-gray-600">Expert guidance on investment strategies and portfolio management.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Wealth Management</h3>
-                    <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                        alt="Wealth Management" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <p class="text-gray-600">Holistic approach to managing and growing your wealth.</p>
-                </div>
-            </div>
-        </section>
-        <!-- why Choose us -->
-        <section class="mt-12">
-            <h2 class="text-3xl font-semibold text-center mb-8">Why Choose Us</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
-                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                        alt="Experienced Team" class="w-1/3 h-32 object-cover rounded-lg mr-6">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Seasoned Maestros</h3>
-                        <p class="text-gray-600">Our team of financial virtuosos brings decades of expertise to
-                            orchestrate your fiscal symphony.</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                        alt="Personalized Strategies" class="w-1/3 h-32 object-cover rounded-lg mr-6">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Bespoke Blueprints</h3>
-                        <p class="text-gray-600">We craft unique financial strategies, tailored to fit your aspirations
-                            like a perfectly cut diamond.</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                        alt="Financial Image 5" class="w-full h-64 object-cover">
                     <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                        alt="Proven Track Record" class="w-1/3 h-32 object-cover rounded-lg mr-6">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Golden Legacy</h3>
-                        <p class="text-gray-600">Our track record shines brighter than a vault of treasures,
-                            illuminating the path to your financial triumph.</p>
-                    </div>
+                        alt="Financial Image 6" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 7" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1607863680198-23b434e8e81b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 8" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 9" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 10" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 11" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 12" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 13" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 14" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1634757439914-23b8acb9d411?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 15" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 16" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 17" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 18" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 19" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Financial Image 20" class="w-full h-64 object-cover">
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                        alt="Ethical Practices" class="w-1/3 h-32 object-cover rounded-lg mr-6">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Ethical Alchemy</h3>
-                        <p class="text-gray-600">We transmute trust into gold, forging unbreakable bonds with our
-                            clients through unwavering integrity.</p>
-                    </div>
+                <button
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-r-lg"
+                    onclick="slide(-1)">❮</button>
+                <button
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-l-lg"
+                    onclick="slide(1)">❯</button>
+            </div>
+        </div>
+    </div>
+    <section class="mt-12">
+        <h2 class="text-3xl font-semibold text-center mb-8">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Financial Planning</h3>
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Financial Planning" class="w-full h-48 object-cover rounded-lg mb-4">
+                <p class="text-gray-600">Comprehensive financial planning tailored to your goals and needs.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Investment Advice</h3>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Investment Advice" class="w-full h-48 object-cover rounded-lg mb-4">
+                <p class="text-gray-600">Expert guidance on investment strategies and portfolio management.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Wealth Management</h3>
+                <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Wealth Management" class="w-full h-48 object-cover rounded-lg mb-4">
+                <p class="text-gray-600">Holistic approach to managing and growing your wealth.</p>
+            </div>
+        </div>
+    </section>
+    <!-- why Choose us -->
+    <section class="mt-12">
+        <h2 class="text-3xl font-semibold text-center mb-8">Why Choose Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Experienced Team" class="w-1/3 h-32 object-cover rounded-lg mr-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Seasoned Maestros</h3>
+                    <p class="text-gray-600">Our team of financial virtuosos brings decades of expertise to
+                        orchestrate your fiscal symphony.</p>
                 </div>
             </div>
-        </section>
-        <!-- contact us -->
-        <section class="mt-12">
-            <h2 class="text-3xl font-semibold text-center mb-8">Contact Us</h2>
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <form>
-                    <div class="mb-4">
-                        <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-                        <input type="text" id="name"
-                            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500"
-                            required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                        <input type="email" id="email"
-                            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500"
-                            required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
-                        <textarea id="message" rows="4"
-                            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500"
-                            required></textarea>
-                    </div>
+            <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Personalized Strategies" class="w-1/3 h-32 object-cover rounded-lg mr-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Bespoke Blueprints</h3>
+                    <p class="text-gray-600">We craft unique financial strategies, tailored to fit your aspirations
+                        like a perfectly cut diamond.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Proven Track Record" class="w-1/3 h-32 object-cover rounded-lg mr-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Golden Legacy</h3>
+                    <p class="text-gray-600">Our track record shines brighter than a vault of treasures,
+                        illuminating the path to your financial triumph.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Ethical Practices" class="w-1/3 h-32 object-cover rounded-lg mr-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Ethical Alchemy</h3>
+                    <p class="text-gray-600">We transmute trust into gold, forging unbreakable bonds with our
+                        clients through unwavering integrity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact us -->
+    <section class="mt-12">
+        <h2 class="text-3xl font-semibold text-center mb-8">Contact Us</h2>
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <form>
+
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                    <input type="text" id="name"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                    <input type="email" id="email"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="mobile" class="block text-gray-700 font-bold mb-2">Mobile Number</label>
+                    <input type="tel" id="mobile"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                    <textarea id="message" rows="4"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500"
+                        required></textarea>
+                </div>
+                <!-- submit button -->
+                <div class="flex flex-row items-center justify-center space-x-4">
                     <button type="submit" id="submit"
-                        class="bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300">Send
-                        Message</button>
-                </form>
-            </div>
-        </section>
+                        class="bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 flex items-center justify-center">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/sent.png" alt="Send icon"
+                            class="w-5 h-5 mr-2">
+                        Send Message
+                    </button>
+
+                    <!-- Whatsapp button -->
+                    <button type="button" id="whatsapp-submit"
+                        class="bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 flex items-center justify-center">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp icon"
+                            class="w-5 h-5 mr-2">
+                        Send via WhatsApp
+                    </button>
+                </div>
+        </div>
+        </form>
+        </div>
+    </section>
     </div>
 
-    <footer class="bg-gray-800 text-white text-center py-4 mt-12">
-        <p>© 2024 धनवृद्धि दर्शन. All rights reserved.</p>
+    </form>
+    </div>
+    </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-purple-800/80 to-indigo-900/80 text-white py-8 mt-12" id="footer">
+        <div class="container">
+            <div class="row">
+                <!-- about us -->
+                <div class="col-md-3 mb-5 mb-md-0">
+                    <h5 class="text-2xl font-bold mb-3">About Us</h5>
+                    <p class="text-about text-gray-300">धनवृद्धि दर्शन is dedicated to providing comprehensive financial
+                        insights,
+                        expert guidance, and personalized strategies to help you achieve your wealth goals and secure
+                        your financial future.</p>
+                </div>
+                <!-- navigation links -->
+                <div class="col-md-3 mb-5 mb-md-0">
+                    <h5 class="text-2xl font-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors duration-300"><i
+                                    class="fas fa-home fa-fw me-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors duration-300"><i
+                                    class="fas fa-cogs fa-fw me-2"></i>Services</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors duration-300"><i
+                                    class="fas fa-envelope fa-fw me-2"></i>Contact</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors duration-300"><i
+                                    class="fas fa-info-circle fa-fw me-2"></i>About Us</a></li>
+                    </ul>
+                </div>
+                <!-- social media icons -->
+                <div class="col-md-3 mb-5 mb-md-0">
+                    <h5 class="text-2xl font-bold mb-3">Connect With Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item me-3"><a href="#"
+                                class="text-white hover:opacity-75 transition-opacity duration-300"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/30px-Facebook_Logo_%282019%29.png"
+                                    alt="Facebook" width="30" class="social-icon"> </a></li>
+                        <li class="list-inline-item me-3"><a href="#"
+                                class="text-white hover:opacity-75 transition-opacity duration-300"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/30px-WhatsApp.svg.png"
+                                    alt="WhatsApp" width="30" class="social-icon"> </a></li>
+                        <li class="list-inline-item me-3"><a href="#"
+                                class="text-white hover:opacity-75 transition-opacity duration-300"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/30px-Telegram_logo.svg.png"
+                                    alt="Telegram" width="30" class="social-icon"> </a></li>
+                        <li class="list-inline-item me-3"><a href="#"
+                                class="text-white hover:opacity-75 transition-opacity duration-300"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/30px-Instagram_logo_2016.svg.png"
+                                    alt="Instagram" width="30" class="social-icon"> </a></li>
+                    </ul>
+                </div>
+                <!-- QR code for Android app -->
+                <div class="col-md-3 text-center">
+                    <h5 class="text-2xl font-bold mb-3">Download Our App</h5>
+                    <div class="relative inline-block">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://example.com"
+                            alt="QR Code for Android App" width="100" height="100" class="rounded-lg shadow-lg mx-auto">
+                    </div>
+                    <p class="mt-2 text-gray-300">Scan to download our Android app </p>
+                </div>
+            </div>
+            <!-- copyright -->
+            <hr class="my-6 border-gray-600">
+            <div class="text-center">
+                <p class="mb-0 text-gray-400">© 2024 धनवृद्धि दर्शन. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
 

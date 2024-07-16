@@ -1,3 +1,62 @@
+// Floating Action Button for slide to top
+const fab = document.createElement('button')
+fab.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>';
+fab.style.position = 'fixed';
+fab.style.bottom = '20px';
+fab.style.right = '20px';
+fab.style.display = 'none';
+fab.style.padding = '12px';
+fab.style.background = 'linear-gradient(45deg, #007bff, #00bfff)';
+fab.style.color = 'white';
+fab.style.border = 'none';
+fab.style.borderRadius = '50%';
+fab.style.cursor = 'pointer';
+fab.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+fab.style.transition = 'all 0.3s ease';
+
+fab.onmouseover = function() {
+    this.style.backgroundColor = '#0056b3';
+    this.style.transform = 'translateY(-3px)';
+    this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
+};
+
+fab.onmouseout = function() {
+    this.style.backgroundColor = '#007bff';
+    this.style.transform = 'translateY(0)';
+    this.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+};
+
+document.body.appendChild(fab)
+
+// Show/hide FAB based on scroll position
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+        fab.style.display = 'block'
+    } else {
+        fab.style.display = 'none'
+    }
+})
+
+// Smooth scroll to top when FAB is clicked
+fab.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+})
+
+
+// slider
+let currentSlide = 0;
+        const slides = document.querySelectorAll('#slider img');
+
+        function slide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            document.getElementById('slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        setInterval(() => slide(1), 5000); // Auto-slide every 5 seconds
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const header = document.querySelector('header');
     header.classList.add('animate-fadeInUp');
@@ -63,10 +122,10 @@ document.body.appendChild(loadingOverlay)
 // Hide loading overlay when the page is fully loaded
 window.addEventListener('load', () => {
     loadingOverlay.style.opacity = '0'
-    loadingOverlay.style.transition = 'opacity 0.5s ease-out'
+    loadingOverlay.style.transition = 'opacity 1s ease-out'
     setTimeout(() => {
         loadingOverlay.remove()
-    }, 500)
+    }, 1000)
 })
 
 // Add animation while scrolling
@@ -170,4 +229,18 @@ const menu = document.querySelector(".mobile-menu");
 
 btn.addEventListener("click", () => {
     menu.classList.toggle("hidden");
+});
+
+// whatsapp feature
+document.getElementById('whatsapp-submit').addEventListener('click', function () {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    var whatsappMessage = "Name: " + name + "%0A" +
+        "Email: " + email + "%0A" +
+        "Message: " + message;
+
+    var whatsappUrl = "https://wa.me/+918817835384?text=" + encodeURIComponent(whatsappMessage);
+    window.open(whatsappUrl, '_blank');
 });

@@ -1,37 +1,83 @@
 body {
-    background: linear-gradient(100deg, #ffffff, #deefdb);
+    /* background: linear-gradient(100deg, #ffffff, #deefdb); */
     min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    animation: footerBackgroundChange 10s linear infinite;
+    background-color: transparent;
+
 }
 
+.list-inline-item {
+    padding-top: 15px;
+}
 
+.text-about {
+    padding-top: 10px;
+}
+
+.text-white {
+    padding-top: 10px;
+}
+
+/* social icons */
+.social-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+ 
+/**
+ * Defines a CSS animation that fades an element up into view.
+ * The animation starts with the element being fully transparent and translated 20 pixels upwards,
+ * and ends with the element being fully opaque and in its original position.
+ * The animation duration is 0.6 seconds and uses an ease-out timing function.
+ */
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+/**
+ * Defines a CSS animation that creates a pulsing effect on an element.
+ * The animation starts with the element at its normal scale, then scales up to 105% of its original size,
+ * and then scales back down to its original size. This cycle repeats every 2 seconds.
+ * The animation uses an ease-in-out timing function to create a smooth pulsing effect.
+ */
 @keyframes pulse {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
+
     100% {
         transform: scale(1);
     }
 }
 
+/**
+ * Defines a CSS animation that slides an element in from the left.
+ * The animation starts with the element being fully transparent and translated 20 pixels to the left,
+ * and ends with the element being fully opaque and in its original position.
+ * The animation duration is 0.6 seconds and uses an ease-out timing function.
+ */
 @keyframes slideInLeft {
     from {
         opacity: 0;
         transform: translateX(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -49,11 +95,13 @@ body {
 .animate-slideInLeft {
     animation: slideInLeft 0.6s ease-out;
 }
+
 @keyframes slideInRight {
     from {
         opacity: 0;
         transform: translateX(20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -65,6 +113,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -75,6 +124,7 @@ body {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -92,5 +142,120 @@ body {
     animation: rotate 2s linear infinite;
 }
 
+/* footer */
+
+@keyframes footerBackgroundChange {
+    0% {
+        background-color: #FF6B6B;
+    }
+
+    25% {
+        background-color: #4ECDC4;
+    }
+
+    50% {
+        background-color: #45B7D1;
+    }
+
+    75% {
+        background-color: #F7B801;
+    }
+
+    100% {
+        background-color: #E84855;
+    }
+}
+
+#footer {
+    animation: footerBackgroundChange 10s linear infinite;
+}
+
+#hero {
+    animation: footerBackgroundChange 10s linear infinite;
+}
+
+/* Mobile menu */
+@keyframes celebrate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.celebration-button:hover {
+    animation: celebrate 0.5s ease-in-out;
+}
 
 
+/* Window slider color */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Change scrollbar color based on section */
+#hero::-webkit-scrollbar-thumb {
+    background: #FF6B6B;
+}
+
+#about::-webkit-scrollbar-thumb {
+    background: #4ECDC4;
+}
+
+#services::-webkit-scrollbar-thumb {
+    background: #45B7D1;
+}
+
+#portfolio::-webkit-scrollbar-thumb {
+    background: #F7B801;
+}
+
+#contact::-webkit-scrollbar-thumb {
+    background: #E84855;
+}
+
+/* Add Firefox compatibility */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* Change scrollbar color based on section for Firefox */
+#hero {
+    scrollbar-color: #FF6B6B #f1f1f1;
+}
+
+#about {
+    scrollbar-color: #4ECDC4 #f1f1f1;
+}
+
+#services {
+    scrollbar-color: #45B7D1 #f1f1f1;
+}
+
+#portfolio {
+    scrollbar-color: #F7B801 #f1f1f1;
+}
+
+#contact {
+    scrollbar-color: #E84855 #f1f1f1;
+}
