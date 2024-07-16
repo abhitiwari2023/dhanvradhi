@@ -230,6 +230,7 @@ const menu = document.querySelector(".mobile-menu");
 btn.addEventListener("click", () => {
     menu.classList.toggle("hidden");
 });
+<<<<<<< HEAD
 
 // whatsapp feature
 document.getElementById('whatsapp-submit').addEventListener('click', function () {
@@ -244,3 +245,5 @@ document.getElementById('whatsapp-submit').addEventListener('click', function ()
     var whatsappUrl = "https://wa.me/+918817835384?text=" + encodeURIComponent(whatsappMessage);
     window.open(whatsappUrl, '_blank');
 });
+=======
+>>>>>>> a7fabec3fd53d81296c0de1cf68e594b25e64693
