@@ -7,6 +7,30 @@ body {
 
 }
 
+/* marquee */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* end marquee */
+
 .list-inline-item {
     padding-top: 15px;
 }
@@ -27,7 +51,7 @@ body {
 .social-icon:hover {
     transform: scale(1.2);
 }
- 
+
 /**
  * Defines a CSS animation that fades an element up into view.
  * The animation starts with the element being fully transparent and translated 20 pixels upwards,

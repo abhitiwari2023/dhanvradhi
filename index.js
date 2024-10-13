@@ -1,3 +1,58 @@
+// mareuee script
+async function fetchStockData() {
+    const url = 'https://api-mintgenie.livemint.com/api-gateway/fundamental/api/v2/indices/home/getHomeIndices?forMarkets=false';
+    const headers = {
+        'Host': 'api-mintgenie.livemint.com',
+        'sec-ch-ua-platform': '"Windows"',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+        'sec-ch-ua': '"Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"',
+        'sec-ch-ua-mobile': '?0',
+        'accept': '*/*',
+        'origin': 'https://www.livemint.com',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        'referer': 'https://www.livemint.com/market',
+        'accept-language': 'en-US,en;q=0.9',
+        'priority': 'u=1, i'
+    };
+
+    try {
+        const response = await fetch(url, { headers });
+        const data = await response.json();
+        displayStockData(data);
+    } catch (error) {
+        console.error('Error fetching stock data:', error);
+    }
+}
+
+function displayStockData(data) {
+    const stockDataContainer = document.querySelector('#stockData .marquee-content');
+    stockDataContainer.innerHTML = '';
+
+    data.forEach(stock => {
+        const stockCard = document.createElement('div');
+        const change = parseFloat(stock.netChange);
+        let textColor;
+        if (change < 0) {
+            textColor = 'text-red-600';
+        } else if (change > 0) {
+            textColor = 'text-green-600';
+        } else {
+            textColor = 'text-gray-600';
+        }
+        stockCard.className = `inline-block px-4 py-2 mx-2 bg-white rounded shadow`;
+        stockCard.innerHTML = `
+            <span class="font-semibold">${stock.name}</span>
+            <span class="${textColor}">${stock.livePrice} (${stock.netChange} ${stock.percentChange}%)</span>
+        `;
+        stockDataContainer.appendChild(stockCard);
+    });
+}
+
+fetchStockData(); // script end 
+
+
 // Floating Action Button for slide to top
 const fab = document.createElement('button')
 fab.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>';
@@ -14,13 +69,13 @@ fab.style.cursor = 'pointer';
 fab.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
 fab.style.transition = 'all 0.3s ease';
 
-fab.onmouseover = function() {
+fab.onmouseover = function () {
     this.style.backgroundColor = '#0056b3';
     this.style.transform = 'translateY(-3px)';
     this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
 };
 
-fab.onmouseout = function() {
+fab.onmouseout = function () {
     this.style.backgroundColor = '#007bff';
     this.style.transform = 'translateY(0)';
     this.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
@@ -48,14 +103,14 @@ fab.addEventListener('click', () => {
 
 // slider
 let currentSlide = 0;
-        const slides = document.querySelectorAll('#slider img');
+const slides = document.querySelectorAll('#slider img');
 
-        function slide(direction) {
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
-            document.getElementById('slider').style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
+function slide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    document.getElementById('slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+}
 
-        setInterval(() => slide(1), 5000); // Auto-slide every 5 seconds
+setInterval(() => slide(1), 5000); // Auto-slide every 5 seconds
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const header = document.querySelector('header');
@@ -131,7 +186,7 @@ window.addEventListener('load', () => {
 // Add animation while scrolling
 function animateOnScroll() {
     const elements = document.querySelectorAll('.animate-on-scroll')
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -167,21 +222,21 @@ window.addEventListener('load', animateOnScroll)
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const firstTimeMessage = document.getElementById('firstTimeMessage');
     const closeMessageBtn = document.getElementById('closeMessage');
 
     // Check if it's the user's first visit
     if (!localStorage.getItem('visited')) {
         firstTimeMessage.classList.remove('hidden');
-        
+
         // Enable the button after 5 seconds
         setTimeout(() => {
             closeMessageBtn.classList.remove('opacity-50', 'cursor-not-allowed');
             closeMessageBtn.removeAttribute('disabled');
         }, 5000);
 
-        closeMessageBtn.addEventListener('click', function() {
+        closeMessageBtn.addEventListener('click', function () {
             firstTimeMessage.classList.add('hidden');
             localStorage.setItem('visited', 'true');
         });
@@ -189,20 +244,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // send email
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm')
-    
-    contactForm.addEventListener('submit', function(e) {
+
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault()
-        
+
         const name = document.getElementById('name').value
         const email = document.getElementById('email').value
         const message = document.getElementById('message').value
-        
+
         // Here you would typically send this data to a server
         // For demonstration, we'll just log it to the console
         console.log('Sending email:', { name, email, message })
-        
+
         // You could use a service like EmailJS or a backend API to actually send the email
         // For example, using EmailJS:
         // emailjs.send("service_id", "template_id", { name, email, message })
@@ -213,10 +268,10 @@ document.addEventListener('DOMContentLoaded', function() {
         //         console.error('Error sending email:', error)
         //         alert('Oops! There was an error sending your message. Please try again later.')
         //     })
-        
+
         // Clear the form
         contactForm.reset()
-        
+
         // Show a confirmation message to the user
         alert('Thank you! Your message has been sent.')
     })
@@ -230,7 +285,6 @@ const menu = document.querySelector(".mobile-menu");
 btn.addEventListener("click", () => {
     menu.classList.toggle("hidden");
 });
-<<<<<<< HEAD
 
 // whatsapp feature
 document.getElementById('whatsapp-submit').addEventListener('click', function () {
@@ -245,5 +299,3 @@ document.getElementById('whatsapp-submit').addEventListener('click', function ()
     var whatsappUrl = "https://wa.me/+918817835384?text=" + encodeURIComponent(whatsappMessage);
     window.open(whatsappUrl, '_blank');
 });
-=======
->>>>>>> a7fabec3fd53d81296c0de1cf68e594b25e64693
